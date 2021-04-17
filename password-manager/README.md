@@ -18,5 +18,3 @@ In this project, I am trying to make a password generator in which a user can cr
   - Using That Index get that character characters[index]
   - add that character to new password
 - Copy That Password To Clipboard
-
-Adding an commit to check github action.
