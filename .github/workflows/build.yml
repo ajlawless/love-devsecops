@@ -30,11 +30,11 @@ jobs:
       uses: actions/checkout@master
 
     # Add steps here like linting, testing, minification, etc.
-      
+
     - name: Setup ECR
       run: |
         # Login to AWS ECR
-        $( aws ecr get-login --no-include-email )
+        $( aws ecr get-login*** wait --no-include-email )
 
     - name: Build and tag the image
       run: |
@@ -42,7 +42,7 @@ jobs:
         docker build \
           -t $CONTAINER_IMAGE \
           -t $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CONTAINER_IMAGE ./password-manager
-           
+
     # Add additional steps here like scanning of image
 
     # Only push to registry on master
